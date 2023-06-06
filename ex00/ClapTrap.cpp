@@ -6,7 +6,7 @@
 /*   By: mjourno <mjourno@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/06 14:52:37 by mjourno           #+#    #+#             */
-/*   Updated: 2023/06/06 16:14:06 by mjourno          ###   ########.fr       */
+/*   Updated: 2023/06/06 16:26:14 by mjourno          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,16 @@
 
 //v Forme canonique v
 ClapTrap::ClapTrap() : _Name("Unnnamed"), _HitPoints(10), _EnergyPoints(10), _AttackDamage(0){
-	std::cout << "Default constructor called" << std::endl;
+	std::cout << "ClapTrap default constructor called" << std::endl;
 	return;
 }
 ClapTrap::ClapTrap(const ClapTrap &src) {
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "ClapTrap copy constructor called" << std::endl;
 	*this = src;
 	return;
 }
 ClapTrap	&ClapTrap::operator=(const ClapTrap &src) {
-	std::cout << "Assignment operator overload called" << std::endl;
+	std::cout << "ClapTrap assignment operator overload called" << std::endl;
 	this->_Name = src._Name;
 	this->_HitPoints = src._HitPoints;
 	this->_EnergyPoints = src._EnergyPoints;
@@ -31,12 +31,12 @@ ClapTrap	&ClapTrap::operator=(const ClapTrap &src) {
 	return *this;
 }
 ClapTrap::~ClapTrap() {
-	std::cout << "Destructor called for " << this->_Name << std::endl;
+	std::cout << "ClapTrap destructor called for " << this->_Name << std::endl;
 	return;
 }
 
 ClapTrap::ClapTrap(std::string name) : _Name(name), _HitPoints(10), _EnergyPoints(10), _AttackDamage(0) {
-	std::cout << "Constructor called for " << name << std::endl;
+	std::cout << "ClapTrap constructor called for " << name << std::endl;
 	return;
 }
 
